@@ -1,0 +1,14 @@
+syntax = "proto3";
+package user.v1;
+
+service UserServer {
+    rpc GetUserInfo(GetUerInfoRequest) returns (GetUserInfoReply) {}
+}
+
+message GetUerInfoRequest {
+}
+
+message GetUserInfoReply {
+    string username = 1;
+    int64 age = 2;
+}
